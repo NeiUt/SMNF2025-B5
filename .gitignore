@@ -47,3 +47,10 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+
+# Output files from Quarto render Kommentar zur besseren Übersicht 
+*.pdf   
+*.html   
+*.csv   
+C:\Users\jhert\Desktop\git projekt\SMNF2025-B5\*
