@@ -1,7 +1,35 @@
 ---
 title: "SMNF2025-B5"
-format: html
+format: 
+  html:
+    toc: true
+  pdf:
+    toc: true
+    papersize: a4
+    geometry: margin=2.5cm
+    documentclass: article
+    fontsize: 12pt
+    number-sections: true
 editor: visual
+author: "Mattis B" "Justus H" "Tommy P" "Aliaksandra F"
+date: today
+---
+
+# Einleitung
+
+*(Einleitung eingefügen)*
+
+# Literaturübersicht
+*(Literaturübersicht einfügen)*
+
+# Methode
+*(Methode einfügen)*
+
+# Ergebnisse
+*(Ergebnisse einfügen)*
+
+# Diskussion
+*(Diskussion einfügen)*
 ---
 
 ## Quarto
