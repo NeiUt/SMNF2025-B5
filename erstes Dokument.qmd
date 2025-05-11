@@ -26,7 +26,7 @@ date: today
 *(Methode einfügen)*
 
 # Ergebnisse
-*(Ergebnisse einfügen)*
+*(Ergebnisse einfügenn)*
 
 # Diskussion
 *(Diskussion einfügen)*
