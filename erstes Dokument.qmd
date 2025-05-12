@@ -15,22 +15,34 @@ author: "Mattis B" "Justus H" "Tommy P" "Aliaksandra F"
 date: today
 ---
 
+
+
+git_hash <- system("git rev-parse HEAD", intern = TRUE)
+cat("Commit Hash:", git_hash)
+
+```markdown
+Der aktuelle Commit-Hash ist `r git_hash`.
+---
+
 # Einleitung
 
 *(Einleitung eingefügen)*
 
 # Literaturübersicht
+
 *(Literaturübersicht einfügen)*
 
 # Methode
+
 *(Methode einfügen)*
 
 # Ergebnisse
+
 *(Ergebnisse einfügenn)*
 
 # Diskussion
-*(Diskussion einfügen)*
----
+
+## *(Diskussion einfügen)*
 
 ## Quarto
 
