@@ -20,17 +20,20 @@ date: today
 *(Einleitung eingefügen)*
 
 # Literaturübersicht
+
 *(Literaturübersicht einfügen)*
 
 # Methode
+
 *(Methode einfügen)*
 
 # Ergebnisse
+
 *(Ergebnisse einfügen)*
 
 # Diskussion
-*(Diskussion einfügen)*
----
+
+## *(Diskussion einfügen)*
 
 ## Quarto
 
