@@ -7,7 +7,7 @@ author:
 - Aliaksandra F
 
 format: 
-  html:
+  html: 
     toc: true
   pdf:
     toc: true
@@ -67,19 +67,17 @@ Ein automatisiertes System wurde entwickelt, um Fake News in Tamil zu erkennen. 
 
 Zur Verarbeitung kamen Transformer-Modelle für Text und Bild zum Einsatz. Ein siamesisches Modell prüfte, ob Text und Bild zusammenpassen. LLMs erstellten automatisch Bildbeschreibungen zur besseren Analyse.
 
-Das System erreichte eine gute Erkennungsrate (F1-Score: 0,8736). Mit erklärbarer KI wurden die Entscheidungen des Modells verständlich gemacht.
-[@LekshmiAmmal2025]
+Das System erreichte eine gute Erkennungsrate (F1-Score: 0,8736). Mit erklärbarer KI wurden die Entscheidungen des Modells verständlich gemacht. [@LekshmiAmmal2025]
 
 Die Arbeit “Requirements engineering for artificial intelligence systems: A systematic mapping study” befasst sich insbesondere mit der Fragestellung, wie Anforderungsstellung an moderne KI-Systeme erfplgt und welche verfügbaren Frameworks, Methoden, Werkzeuge und Techniken dazu verwendet werden und welche Limitierungen und Herausforderungen der Anforderungsstellung sich dabei vorfinden lassen.
 
 Basierend auf 43 referenzierten Studien wurden die darin verwendeten Methoden, Modelle, Werkzeuge und Techniken der Anforderungsstellung analysiert.
 
-Basierend auf der Analyse wird in der Arbeit ersichtlich, dass betrachtete KI-Systeme mangelnde Intergration aktueller Anforderungsmodelle, Werkzeuge und Methoden aufweisen. Nach der Analyse der 43 Studien ergab sich, dass es noch viele Herausforderungen in der Anforderungsstellung an KI-Systeme gibt, wobei besondere Schwerpunkte die Erklärbarkeit generierter Inhalte, ethische Fragen, Fragen der Datenanforderungen und Mangel an Kommunikation zwischen Softwareentwicklern und Data Scientists.
-[@Quelle2]
+Basierend auf der Analyse wird in der Arbeit ersichtlich, dass betrachtete KI-Systeme mangelnde Intergration aktueller Anforderungsmodelle, Werkzeuge und Methoden aufweisen. Nach der Analyse der 43 Studien ergab sich, dass es noch viele Herausforderungen in der Anforderungsstellung an KI-Systeme gibt, wobei besondere Schwerpunkte die Erklärbarkeit generierter Inhalte, ethische Fragen, Fragen der Datenanforderungen und Mangel an Kommunikation zwischen Softwareentwicklern und Data Scientists. [@Quelle2]
 
 Die Arbeit der Autoren Farnaz Jahanbakhsh, Yannis Katsis, Dakuo Wang, Lucian Popa und Michael Müller hat sich mit der Fragestellung beschäftigt, wie menschliche Bewertungen und KI-Vorhersagen zusammen genutzt werden können, um Fehlinformationen in Online-Beiträgen zu erkennen. Dabei geht es darum, die Zusammenarbeit zwischen Nutzern und einer personalisierten künstlichen Intelligenz (KI) zu untersuchen, um die Genauigkeit bei der Bewertung von Beiträgen, besonders auf sozialen Medien, zu verbessern und mögliche Probleme zu Analysieren. Das Ziel ist herauszufinden, ob eine solche personalisierte KI, Menschen dabei helfen kann, die Vertrauenswürdigkeit von Online-Inhalten besser einzuschätzen. Es wurde untersucht, wie Nutzer mit der vorhersage der KI interagieren, ob sie davon profitieren und oder ob Probleme auftreten könnten. Ein Vorteil der personalisierten KI ist, dass sie Nutzer als helfer dienen kann. Sie kann dem Nutzer helfen potentielle Falschinformationen zu erkennen, bevor diese weitergeleitet werden. Jedoch gibt auch Herausforderungen, denn die KI könnte fehlerhafte Vorhersagen machen, die die Bewertung des Nutzers beeinflussen. So könnten falsche Informationen als glaubwürdig erkannt werden. Des Weiteren gibt es die Befürchtung, dass der Einsatz so einer KI, insbesondere durch Plattformbetreiber, die Meinungsfreiheit einschränken könnte. Das wird zum einen von Wissenschaftlern als auch zum anderen von Nutzern kritisch gesehen. Die KI analysiert, wie ein Nutzer in der Vergangenheit Inhalte eingeschätzt hat, und erstellt daraus eine Person bezogene vorhersage. Dieses Modell sagt dann voraus, wie der jeweilige Nutzer wahrscheinlich aktuelle Inhalte bewerten würde. Etwa ob ein Tweet wahr oder eine Fehlinformation ist. Die Nutzerstudie zeigt, dass eine personalisierte KI die Nutzer durch ihre Vorhersagen Beeinflusst. Dieser Effekt verschwand jedoch, wenn die Nutzer der Bewertung nachgingen durch eine Begründung ihrer Entscheidung
 
-[@jahanbakhsh2023] 
+[@jahanbakhsh2023]
 
 # Methode
 
