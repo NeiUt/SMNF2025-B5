@@ -23,17 +23,29 @@ https://github.com/NeiUt/SMNF2025-B5/tree/main
 
 #Code of Conduct
 
--   Umgang mit Feedback, unterschiedlichen Perspektiven und Meinungsverschiedenheiten: *(Einfügen)*
+-   Umgang mit Feedback, unterschiedlichen Perspektiven und Meinungsverschiedenheiten:
 
--   Faire Aufteilung der Arbeitslast: *(Einfügen)*
+    -   Feedback wird ehrlich aufgenommen und bei zukünftigen Arbeiten angewendet
 
--   Verhalten in Bezug auf vereinbarte und verpflichtende Termine: *(Einfügen)*
+-   Faire Aufteilung der Arbeitslast:
 
--   Einhaltung der wissenschaftlichen Integrität: *(Einfügen)*
+    -   Die zu erledigenden Aufgaben werden gerecht und in Absprache aufgeteilt.
 
--   Verpflichtung zum Schutz von Daten und zur Wahrung ihrer Vertraulichkeit: *(Einfügen)*
+-   Verhalten in Bezug auf vereinbarte und verpflichtende Termine:
 
--   Nutzung und Kennzeichnung von AI Tools (z.B. ChatGPT): *(Einfügen)*
+    -   Termine für gemeinsames projektorientiertes Arbeiten, werden per Online-Messanger vereinbart und die Gruppenmitglieder finden sich dann in einem Videoanruf ein oder es wird sich in Präsenz getroffen.
+
+-   Einhaltung der wissenschaftlichen Integrität:
+
+    -   Es werden nur verlässliche Quellen verwendet, die auch korrekt zitiert werden und geschriebenes wird objektiv verfasst.
+
+-   Verpflichtung zum Schutz von Daten und zur Wahrung ihrer Vertraulichkeit:
+
+    -   Daten werden vertaulich behandelt und nicht an Dritte weitergegeben.
+
+-   Nutzung und Kennzeichnung von AI Tools (z.B. ChatGPT):
+
+    -   Nutzung von AI tools wird gekennzeichnet und nicht direkt übernommen.
 
 ------------------------------------------------------------------------
 
