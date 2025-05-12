@@ -27,7 +27,7 @@ https://github.com/NeiUt/SMNF2025-B5/tree/main
 
 
 
-##Code of Conduct
+# Code of Conduct
 
 -   Umgang mit Feedback, unterschiedlichen Perspektiven und Meinungsverschiedenheiten:
 
