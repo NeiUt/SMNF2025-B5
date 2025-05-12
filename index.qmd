@@ -29,6 +29,12 @@ Zur Verarbeitung kamen Transformer-Modelle für Text und Bild zum Einsatz. Ein s
 
 Das System erreichte eine gute Erkennungsrate (F1-Score: 0,8736). Mit erklärbarer KI wurden die Entscheidungen des Modells verständlich gemacht.
 
+Die Arbeit “Requirements engineering for artificial intelligence systems: A systematic mapping study” befasst sich insbesondere mit der Fragestellung, wie Anforderungsstellung an moderne KI-Systeme erfplgt und welche verfügbaren Frameworks, Methoden, Werkzeuge und Techniken dazu verwendet werden und welche Limitierungen und Herausforderungen der Anforderungsstellung sich dabei vorfinden lassen.
+
+Basierend auf 43 referenzierten Studien wurden die darin verwendeten Methoden, Modelle, Werkzeuge und Techniken der Anforderungsstellung analysiert.
+
+Basierend auf der Analyse wird in der Arbeit ersichtlich, dass betrachtete KI-Systeme mangelnde Intergration aktueller Anforderungsmodelle, Werkzeuge und Methoden aufweisen. Nach der Analyse der 43 Studien ergab sich, dass es noch viele Herausforderungen in der Anforderungsstellung an KI-Systeme gibt, wobei besondere Schwerpunkte die Erklärbarkeit generierter Inhalte, ethische Fragen, Fragen der Datenanforderungen und Mangel an Kommunikation zwischen Softwareentwicklern und Data Scientists.
+
 # Methode
 
 *(Methode einfügen)*
