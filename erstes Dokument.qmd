@@ -16,34 +16,26 @@ date: today
 ---
 
 #Link des Repositories
+
 https://github.com/NeiUt/SMNF2025-B5/tree/main
 
-<!-- git_hash <- system("git rev-parse HEAD", intern = TRUE)
-cat("Commit Hash:", git_hash)
-
-```markdown
-Der aktuelle Commit-Hash ist `r git_hash`. -->
-
+*(Hier Hash des aktuellen Git-Commits einfügen)*
 
 #Code of Conduct
-- Umgang mit Feedback, unterschiedlichen Perspektiven und Meinungsverschiedenheiten:
-*(Einfügen)*
 
-- Faire Aufteilung der Arbeitslast:
-*(Einfügen)*
+-   Umgang mit Feedback, unterschiedlichen Perspektiven und Meinungsverschiedenheiten: *(Einfügen)*
 
-- Verhalten in Bezug auf vereinbarte und verpflichtende Termine:
-*(Einfügen)*
+-   Faire Aufteilung der Arbeitslast: *(Einfügen)*
 
-- Einhaltung der wissenschaftlichen Integrität:
-*(Einfügen)*
+-   Verhalten in Bezug auf vereinbarte und verpflichtende Termine: *(Einfügen)*
 
-- Verpflichtung zum Schutz von Daten und zur Wahrung ihrer Vertraulichkeit:
-*(Einfügen)*
+-   Einhaltung der wissenschaftlichen Integrität: *(Einfügen)*
 
-- Nutzung und Kennzeichnung von AI Tools (z.B. ChatGPT):
-*(Einfügen)*
----
+-   Verpflichtung zum Schutz von Daten und zur Wahrung ihrer Vertraulichkeit: *(Einfügen)*
+
+-   Nutzung und Kennzeichnung von AI Tools (z.B. ChatGPT): *(Einfügen)*
+
+------------------------------------------------------------------------
 
 # Einleitung
 
@@ -63,7 +55,7 @@ Der aktuelle Commit-Hash ist `r git_hash`. -->
 
 # Diskussion
 
-## *(Diskussion einfügen)*
+*(Diskussion einfügen)*
 
 ## Quarto
 
