@@ -53,7 +53,6 @@ https://github.com/NeiUt/SMNF2025-B5/tree/main
 
 *(Einleitung eingefügen)*
 
-<<<<<<< HEAD
 # Literaturübersicht
 
 Fake News verbreiten sich oft durch manipulierte Bilder, Deepfakes und bearbeiteten Ton.
@@ -82,23 +81,6 @@ Mit erklärbarer KI wurden die Entscheidungen des Modells verständlich gemacht.
 # Diskussion
 
 ## *(Diskussion einfügen)*
-=======
-# Literaturübersicht (2)
-
-*(Literaturübersicht einfügen)*
-
-# Methode (3)
-
-*(Methode einfügen)*
-
-# Ergebnisse (4)
-
-*(Ergebnisse einfügen)*
-
-# Diskussion (5)
-
-*(Diskussion einfügen)*
->>>>>>> bee910f319742fbf628995da531c1ad5218a2bfb
 
 ## Quarto
 
