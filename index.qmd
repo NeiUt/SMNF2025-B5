@@ -21,7 +21,13 @@ date: today
 
 # Literaturübersicht
 
-*(Literaturübersicht einfügen)*
+\*Fake News verbreiten sich oft durch manipulierte Bilder, Deepfakes und bearbeiteten Ton. Diese Inhalte können schnell die öffentliche Meinung beeinflussen, Vertrauen zerstören und Verschwörungstheorien verstärken. Deshalb ist Medienkompetenz sehr wichtig.
+
+Ein automatisiertes System wurde entwickelt, um Fake News in Tamil zu erkennen. Dafür wurde ein Datensatz mit Überschriften, Texten und Bildern erstellt. Die Nachrichten wurden in „true“, „false“ und „fake“ eingeteilt.
+
+Zur Verarbeitung kamen Transformer-Modelle für Text und Bild zum Einsatz. Ein siamesisches Modell prüfte, ob Text und Bild zusammenpassen. LLMs erstellten automatisch Bildbeschreibungen zur besseren Analyse.
+
+Das System erreichte eine gute Erkennungsrate (F1-Score: 0,8736). Mit erklärbarer KI wurden die Entscheidungen des Modells verständlich gemacht.\*
 
 # Methode
 
