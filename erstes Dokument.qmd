@@ -25,7 +25,6 @@ bibliography: Literatur.bib
 
 https://github.com/NeiUt/SMNF2025-B5/tree/main
 
-#| echo: FALSE
 # Git-Hash aus dem aktuellen Repository abrufen
 git_hash <- system("git rev-parse --short HEAD", intern = TRUE)
 cat(sprintf("**Aktueller Git-Commit-Hash:** `%s`", git_hash))
