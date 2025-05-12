@@ -1,5 +1,11 @@
 ---
 title: "SMNF2025-B5"
+author:
+- Mattis Becker
+- Justus H
+- Tommy P
+- Aliaksandra F
+
 format: 
   html:
     toc: true
@@ -11,17 +17,17 @@ format:
     fontsize: 12pt
     number-sections: true
 editor: visual
-author: "Mattis B" "Justus H" "Tommy P" "Aliaksandra F"
 date: today
+bibliography: Literatur.bib
 ---
 
-#Link des Repositories
+##Link des Repositories
 
 https://github.com/NeiUt/SMNF2025-B5/tree/main
 
 *(Hier Hash des aktuellen Git-Commits einfügen)*
 
-#Code of Conduct
+##Code of Conduct
 
 -   Umgang mit Feedback, unterschiedlichen Perspektiven und Meinungsverschiedenheiten:
 
@@ -49,7 +55,7 @@ https://github.com/NeiUt/SMNF2025-B5/tree/main
 
 ------------------------------------------------------------------------
 
-# Einleitung 
+# Einleitung
 
 *(Einleitung eingefügen)*
 
@@ -69,6 +75,11 @@ Basierend auf 43 referenzierten Studien wurden die darin verwendeten Methoden, M
 
 Basierend auf der Analyse wird in der Arbeit ersichtlich, dass betrachtete KI-Systeme mangelnde Intergration aktueller Anforderungsmodelle, Werkzeuge und Methoden aufweisen. Nach der Analyse der 43 Studien ergab sich, dass es noch viele Herausforderungen in der Anforderungsstellung an KI-Systeme gibt, wobei besondere Schwerpunkte die Erklärbarkeit generierter Inhalte, ethische Fragen, Fragen der Datenanforderungen und Mangel an Kommunikation zwischen Softwareentwicklern und Data Scientists.
 
+Die Arbeit der Autoren Farnaz Jahanbakhsh, Yannis Katsis, Dakuo Wang, Lucian Popa und Michael Müller hat sich mit der Fragestellung beschäftigt, wie menschliche Bewertungen und KI-Vorhersagen zusammen genutzt werden können, um Fehlinformationen in Online-Beiträgen zu erkennen. Dabei geht es darum, die Zusammenarbeit zwischen Nutzern und einer personalisierten künstlichen Intelligenz (KI) zu untersuchen, um die Genauigkeit bei der Bewertung von Beiträgen, besonders auf sozialen Medien, zu verbessern und mögliche Probleme zu Analysieren. Das Ziel ist herauszufinden, ob eine solche personalisierte KI, Menschen dabei helfen kann, die Vertrauenswürdigkeit von Online-Inhalten besser einzuschätzen. Es wurde untersucht, wie Nutzer mit der vorhersage der KI interagieren, ob sie davon profitieren und oder ob Probleme auftreten könnten. Ein Vorteil der personalisierten KI ist, dass sie Nutzer als helfer dienen kann. Sie kann dem Nutzer helfen potentielle Falschinformationen zu erkennen, bevor diese weitergeleitet werden. Jedoch gibt auch Herausforderungen, denn die KI könnte fehlerhafte Vorhersagen machen, die die Bewertung des Nutzers beeinflussen. So könnten falsche Informationen als glaubwürdig erkannt werden. Des Weiteren gibt es die Befürchtung, dass der Einsatz so einer KI, insbesondere durch Plattformbetreiber, die Meinungsfreiheit einschränken könnte. Das wird zum einen von Wissenschaftlern als auch zum anderen von Nutzern kritisch gesehen. Die KI analysiert, wie ein Nutzer in der Vergangenheit Inhalte eingeschätzt hat, und erstellt daraus eine Person bezogene vorhersage. Dieses Modell sagt dann voraus, wie der jeweilige Nutzer wahrscheinlich aktuelle Inhalte bewerten würde. Etwa ob ein Tweet wahr oder eine Fehlinformation ist. Die Nutzerstudie zeigt, dass eine personalisierte KI die Nutzer durch ihre Vorhersagen Beeinflusst. Dieser Effekt verschwand jedoch, wenn die Nutzer der Bewertung nachgingen durch eine Begründung ihrer Entscheidung
+
+[@jahanbakhsh2023] 
+[@Quelle2]
+[@LekshmiAmmal2025]
 # Methode
 
 *(Methode einfügen)*
