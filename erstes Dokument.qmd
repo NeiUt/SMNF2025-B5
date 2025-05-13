@@ -15,61 +15,13 @@ author: "Mattis B" "Justus H" "Tommy P" "Aliaksandra F"
 date: today
 ---
 
-#Link des Repositories
-
-https://github.com/NeiUt/SMNF2025-B5/tree/main
-
-*(Hier Hash des aktuellen Git-Commits einfügen)*
-
-#Code of Conduct
-
--   Umgang mit Feedback, unterschiedlichen Perspektiven und Meinungsverschiedenheiten:
-
-    -   Feedback wird ehrlich aufgenommen und bei zukünftigen Arbeiten angewendet
-
--   Faire Aufteilung der Arbeitslast:
-
-    -   Die zu erledigenden Aufgaben werden gerecht und in Absprache aufgeteilt.
-
--   Verhalten in Bezug auf vereinbarte und verpflichtende Termine:
-
-    -   Termine für gemeinsames projektorientiertes Arbeiten, werden per Online-Messanger vereinbart und die Gruppenmitglieder finden sich dann in einem Videoanruf ein oder es wird sich in Präsenz getroffen.
-
--   Einhaltung der wissenschaftlichen Integrität:
-
-    -   Es werden nur verlässliche Quellen verwendet, die auch korrekt zitiert werden und geschriebenes wird objektiv verfasst.
-
--   Verpflichtung zum Schutz von Daten und zur Wahrung ihrer Vertraulichkeit:
-
-    -   Daten werden vertaulich behandelt und nicht an Dritte weitergegeben.
-
--   Nutzung und Kennzeichnung von AI Tools (z.B. ChatGPT):
-
-    -   Nutzung von AI tools wird gekennzeichnet und nicht direkt übernommen.
-
-------------------------------------------------------------------------
-
-# Einleitung (1)
+# Einleitung
 
 *(Einleitung eingefügen)*
 
-<<<<<<< HEAD
 # Literaturübersicht
 
-Fake News verbreiten sich oft durch manipulierte Bilder, Deepfakes und bearbeiteten Ton.
-Diese Inhalte können schnell die öffentliche Meinung beeinflussen, Vertrauen zerstören und Verschwörungstheorien verstärken.
-Deshalb ist Medienkompetenz sehr wichtig.
-
-Ein automatisiertes System wurde entwickelt, um Fake News in Tamil zu erkennen.
-Dafür wurde ein Datensatz mit Überschriften, Texten und Bildern erstellt.
-Die Nachrichten wurden in „true“, „false“ und „fake“ eingeteilt.
-
-Zur Verarbeitung kamen Transformer-Modelle für Text und Bild zum Einsatz.
-Ein siamesisches Modell prüfte, ob Text und Bild zusammenpassen.
-LLMs erstellten automatisch Bildbeschreibungen zur besseren Analyse.
-
-Das System erreichte eine gute Erkennungsrate (F1-Score: 0,8736).
-Mit erklärbarer KI wurden die Entscheidungen des Modells verständlich gemacht.
+*(Literaturübersicht einfügen)*
 
 # Methode
 
@@ -82,23 +34,6 @@ Mit erklärbarer KI wurden die Entscheidungen des Modells verständlich gemacht.
 # Diskussion
 
 ## *(Diskussion einfügen)*
-=======
-# Literaturübersicht (2)
-
-*(Literaturübersicht einfügen)*
-
-# Methode (3)
-
-*(Methode einfügen)*
-
-# Ergebnisse (4)
-
-*(Ergebnisse einfügen)*
-
-# Diskussion (5)
-
-*(Diskussion einfügen)*
->>>>>>> bee910f319742fbf628995da531c1ad5218a2bfb
 
 ## Quarto
 
