@@ -6,6 +6,7 @@ author:
 - Tommy P
 - Aliaksandra F
 - Paul Riehle
+- Jakob L
 
 format: 
   html: 
