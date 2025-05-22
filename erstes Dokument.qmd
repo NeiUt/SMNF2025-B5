@@ -5,6 +5,7 @@ author:
 - Justus H
 - Tommy P
 - Aliaksandra F
+- Paul Riehle
 
 format: 
   html: 
