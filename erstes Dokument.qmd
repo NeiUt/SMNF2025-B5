@@ -27,7 +27,15 @@ bibliography: Literatur.bib
 
 https://github.com/NeiUt/SMNF2025-B5/tree/main
 
-##Aktueller Hash: -965b7bb0ad9f8d6a27db51c1a0c41527b04bd42d
+##Aktueller Hash:
+
+```{r}
+#| label: Commit Hash
+#| echo: false
+commit_hash <- system("git rev-parse --short=7 HEAD", intern = TRUE)
+commit_hash
+
+```
 
 # Code of Conduct
 
