@@ -9,7 +9,8 @@ author:
 - Jakob L
 
 format: 
-  html: 
+  html:
+    number-sections: true
     toc: true
   pdf:
     toc: true
@@ -97,46 +98,65 @@ Für die Datenauswertung nutzten wir die thematische Analyse nach Braun & Clarke
 
 # Ergebnisse
 
-*(Ergebnisse einfügen)*
-
-Analyse:
+## Analyse
 
 |  |  |  |  |
-|----------------------------------------------|------------------------------------------------------------------------------------|--|-----------------------------------------------------------------------------------------------------------------------------------|
-| Name | Vorwissen | Implementierung | Gefahren
-von KI-Tools |
-| Definition | Erfahrungen
-mit social media, fake news und KI-Tools. | KI-Tools
-sollten benutzt werden um den Grad der Falschinformationen zu Kennzeichnen.
-Außerdem leicht erreichbar sein, aber nicht prägnant im Vordergrund stehen. | Ethische
-Fragenstellung wer diese KI-Tools kontrolliert und welchen Einfluss hat eine
-fehlende Kennzeichnung. |
-| Textstelle | „Also, mir ist das erst quasi zur Corona-Zeit richtig aufgefallen. Da wurde ja sehr, sehr viel Fehlinformation und Halbwahrheiten gestreut. Da habe ich auch entdeckt, dass das teilweise gekennzeichnet worden ist, dass das nicht komplett der Wahrheit entspricht. Sowohl als YouTube als auch Instagram, ich glaube auf TikTok sogar auch.“ (B5_01, Zeile 68-73) | „Ich denke, es sollte schon immer präsent sein, damit sich auch Falschnachrichten generell einfach weniger verbreiten. Gleichzeitig sollte es aber natürlich nicht zu präsent sein und nicht zu viel Platz in der Anwendung einnehmen. “ (B5_02, Zeile 113-116). „Vor allem in Situationen, wo man meinen könnte, dass die Information wirklich zutreffend ist, weil das für das eigene Bild in einem gewissen Themenbereich sehr wahrscheinlich klingt oder einleuchtend klingt, dass man das dann tendenziell sogar eher aufnehmen kann. KI's könnten da wirklich helfen, Nutzer aufmerksam zu machen, dass sich das da nicht um eine verifizierte Meinung handelt, sondern um irgendwelche erfundenen Sachen oder gezielten Fehlinformationen.“ (B5_01, Zeile 97-105) | „Ja also ich finde das sollte ein gesondertes team sein es gibt ja auch zum beispiel ein ethik rat wenn es um thema ki geht was ki machen darf und was nicht. Die wären zum Beispiel eine interessante Anlaufstelle dafür, damit man halt so gut es geht Einflüsse von Dritten vermeiden könnte, die halt interne Ziele verfolgen.“ (B5_01, Zeile 197-202) „Andererseits würde ich auch eine kleine Gefahr darin sehen, wenn man als Mensch diese KI dafür nutzt, um sich Informationen bestätigen zu lassen oder den Wahrheitsgehalt herauszufinden. Wenn man sich dann fälschlicherweise zu sehr auf die KI verlässt und die KI aber doch mal einen Fehler macht, wie das aktuell auch schon vorkommt.“ (B5_02, Zeile 82-87) |
+|-------------|------------------|-------------|-----------------------------|
+| Name | Vorwissen | Implementierung | Gefahren |
+| von KI-Tools |  |  |  |
+| Definition | Erfahrungen |  |  |
+| mit social media, fake news und KI-Tools. | KI-Tools |  |  |
+
+sollten benutzt werden um den Grad der Falschinformationen zu Kennzeichnen. Außerdem leicht erreichbar sein, aber nicht prägnant im Vordergrund stehen. \| Ethische Fragenstellung wer diese KI-Tools kontrolliert und welchen Einfluss hat eine fehlende Kennzeichnung. \| \| Textstelle \| „Also, mir ist das erst quasi zur Corona-Zeit richtig aufgefallen. Da wurde ja sehr, sehr viel Fehlinformation und Halbwahrheiten gestreut. Da habe ich auch entdeckt, dass das teilweise gekennzeichnet worden ist, dass das nicht komplett der Wahrheit entspricht. Sowohl als YouTube als auch Instagram, ich glaube auf TikTok sogar auch.“ (B5_01, Zeile 68-73) \| „Ich denke, es sollte schon immer präsent sein, damit sich auch Falschnachrichten generell einfach weniger verbreiten. Gleichzeitig sollte es aber natürlich nicht zu präsent sein und nicht zu viel Platz in der Anwendung einnehmen. “ (B5_02, Zeile 113-116). „Vor allem in Situationen, wo man meinen könnte, dass die Information wirklich zutreffend ist, weil das für das eigene Bild in einem gewissen Themenbereich sehr wahrscheinlich klingt oder einleuchtend klingt, dass man das dann tendenziell sogar eher aufnehmen kann. KI's könnten da wirklich helfen, Nutzer aufmerksam zu machen, dass sich das da nicht um eine verifizierte Meinung handelt, sondern um irgendwelche erfundenen Sachen oder gezielten Fehlinformationen.“ (B5_01, Zeile 97-105) \| „Ja also ich finde das sollte ein gesondertes team sein es gibt ja auch zum beispiel ein ethik rat wenn es um thema ki geht was ki machen darf und was nicht. Die wären zum Beispiel eine interessante Anlaufstelle dafür, damit man halt so gut es geht Einflüsse von Dritten vermeiden könnte, die halt interne Ziele verfolgen.“ (B5_01, Zeile 197-202) „Andererseits würde ich auch eine kleine Gefahr darin sehen, wenn man als Mensch diese KI dafür nutzt, um sich Informationen bestätigen zu lassen oder den Wahrheitsgehalt herauszufinden. Wenn man sich dann fälschlicherweise zu sehr auf die KI verlässt und die KI aber doch mal einen Fehler macht, wie das aktuell auch schon vorkommt.“ (B5_02, Zeile 82-87) \|
+
+## Ergebnisse in Textform:
+
+In diesem Abschnitt fassen wir die Ergebnisse unserer qualitativen
+Forschung zusammen. Wir führten und analysierten zwei Interviews zum
+Thema „KI als Werkzeug zur Erkennung von Fake News“. Beide
+Befragten haben bereits Erfahrung mit dem Umgang mit Social-Media,
+Fake-News und KI-Tools gemacht. Daher sind ihre Gedanken und Meinung
+sehr relevant für unsere Forschungsfrage, denn sie können uns
+direkt aus erster Hand berichten.
+
+### Vorwissen
+
+Zunächst erfuhren wir etwas über die Vorkenntnisse der Probanden. Dabei konnten wir
+feststellen, dass sie bereits Kontakt mit Fake-News hatten und einige
+Social Media-Plattformen sogar bereits versuchen dagegen vorzugehen
+(vgl. B5_01, Zeile 68 -73). Das bietet eine gute Grundlage für
+unseren Ansatz, den ganzen Vorgang durch ein KI-Tool zu
+automatisieren.
+
+### Implementierung
+
+Danach ging es um die Implementierung. In diesem Abschnitt geht es darum, wie sich die
+Befragten die Implementierung des Tools vorstellen. Man sollte bei
+der Implementierung auf ein Gleichgewicht aus Prägnanz und
+Unauffälligkeit achten. Die KI soll helfen, aber nicht überfordern.
+Wichtig ist auch den Benutzer auf fehlende Verifizierungen oder
+Quellen aufmerksam zu machen, besonders wenn der Inhalt auf den
+ersten Blick logisch erscheint.
+
+### Gefahren von KI-Tools
+
+Auch die Gefahren der KI wurden in unseren Interviews angesprochen. Hierbei werden von
+unseren Probanden wichtige ethische Probleme angesprochen. Es geht
+darum, wer die KI kontrolliert und wie man dafür sorgen kann, dass
+sie so gut es geht neutral bliebt. Daher wird z.B. ein Ethikrat
+vorgeschlagen, welcher dafür sorgt, dass Dritte keinen Einfluss auf
+die KI haben können und Interessenkonflikte vermieden werden können.
+(vgl. B5_01, Zeile 197-202) Ein weiteres Problem ergibt sich, wenn
+die Benutzer sich zu sehr auf die KI verlassen. So kann es passieren,
+dass sie einen Fehler macht und Fake-News nicht als solche markiert
+werden. „Wenn man sich dann fälschlicherweise zu sehr auf die KI
+verlässt und die KI aber doch mal einen Fehler macht, wie das
+aktuell auch schon vorkommt.“(B5_02, Zeile 82-87). Auch dies muss
+man bei der Implementierung des KI-Tools beachten.
 
 # Diskussion
 
 ## *(Diskussion einfügen)*
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-You can add options to executable code like this
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
 
 "Tommy05lol"
 
@@ -145,3 +165,5 @@ The `echo: false` option disables the printing of code (only output is displayed
 "Matt1s1234"
 
 "NeiUt"
+
+"jakolex03"
