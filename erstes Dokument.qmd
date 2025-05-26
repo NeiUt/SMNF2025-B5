@@ -89,7 +89,7 @@ Die Arbeit der Autoren Farnaz Jahanbakhsh, Yannis Katsis, Dakuo Wang, Lucian Pop
 
 # Methode
 
-*Für unsere Untersuchung führten wir zwei Interviews mit Studierenden durch, die regelmäßig soziale Medien nutzen. Das erste Interview mit Pseudonym "B5_01" fand am 25.05.2025 statt, das zweite "B5_02" am 26.05.2025. Beide Interviews dauerten jeweils 10-15 Minuten und wurden Digital aufgezeichnet.
+*Wir haben uns für einen qualitativ-explorativen Ansatz entschieden, da dieser ermöglicht, subjektive Erfahrungen, Bedarfe und Erwartungen von Social-Media-Nutzer hinsichtlich einer KI-basierten Misinformations­erkennung offen zu erfassen. Für unsere Untersuchung führten wir zwei Interviews mit Studierenden durch, die regelmäßig soziale Medien nutzen. Das erste Interview fand am 25.05.2025 statt, der Teilnehmende wird hier als "B5_01" bezeichnet , der zweite Teilnehmende "B5_02" am 26.05.2025. Beide Interviews dauerten jeweils 10-15 Minuten und wurden Digital aufgezeichnet.
 
 Zunächst nutzten wir "Whisper" für die automatische Transkription, anschließend bearbeiteten wir die Texte manuell nach. Dabei ergänzten wir Zeilennummern, ersetzten Namen durch Pseudonyme und markierten Sprecherwechsel durch Kürzel (I für Interviewende, B5 für Teilnehmende). Identifizierende Details wurden vollständig anonymisiert.
 
