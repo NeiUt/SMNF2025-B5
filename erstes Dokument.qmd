@@ -89,9 +89,9 @@ Die Arbeit der Autoren Farnaz Jahanbakhsh, Yannis Katsis, Dakuo Wang, Lucian Pop
 
 # Methode
 
-*Für unsere Untersuchung führten wir zwei Interviews mit Studierenden durch, die regelmäßig soziale Medien nutzen. Das erste Interview mit Pseudonym "TN_1" fand am 25.05.2025 statt, das zweite "TN_2" am 26.05.2025. Beide Interviews dauerten jeweils 10-15 Minuten und wurden mit einem digitalen Recorder aufgezeichnet.
+*Für unsere Untersuchung führten wir zwei Interviews mit Studierenden durch, die regelmäßig soziale Medien nutzen. Das erste Interview mit Pseudonym "B5_01" fand am 25.05.2025 statt, das zweite "B5_02" am 26.05.2025. Beide Interviews dauerten jeweils 10-15 Minuten und wurden Digital aufgezeichnet.
 
-Zunächst nutzten wir "Whisper" für die automatische Transkription, anschließend bearbeiteten wir die Texte manuell nach. Dabei ergänzten wir Zeilennummern, ersetzten Namen durch Pseudonyme und markierten Sprecherwechsel durch Kürzel (I für Interviewende, TN für Teilnehmende). Identifizierende Details wurden vollständig anonymisiert.
+Zunächst nutzten wir "Whisper" für die automatische Transkription, anschließend bearbeiteten wir die Texte manuell nach. Dabei ergänzten wir Zeilennummern, ersetzten Namen durch Pseudonyme und markierten Sprecherwechsel durch Kürzel (I für Interviewende, B5 für Teilnehmende). Identifizierende Details wurden vollständig anonymisiert.
 
 Für die Datenauswertung nutzten wir die thematische Analyse nach Braun & Clarke, die ein strukturiertes Vorgehen zum Erkennen von Mustern in qualitativen Daten ermöglicht. Wir codierten gemeinsam in MaxQDA, besprachen unsere Codes und fassten zusammengehörige Codes zu drei übergeordneten Themen zusammen, um die Analyse übersichtlich und nachvollziehbar zu gestalten.*
 
