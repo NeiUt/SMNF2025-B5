@@ -81,7 +81,7 @@ Die Arbeit der Autoren Farnaz Jahanbakhsh, Yannis Katsis, Dakuo Wang, Lucian Pop
 
 # Methode
 
-``` mermaid
+```mermaid
 flowchart TD
     n1["Start"] --> n2["Datenschutzerklärung"]
     n2 --> n3["Pre-Test-Fragebogen"]
@@ -94,7 +94,8 @@ flowchart TD
     n16 --> n17["Verabschiedung und Dank"]
     n17 --> n18["VP-Stunden-Umfrage"]
 
-    n1@{ shape: rect}```
+    n1@{ shape: rect}
+    ```
 
 # Ergebnisse
 
