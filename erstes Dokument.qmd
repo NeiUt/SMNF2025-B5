@@ -82,18 +82,19 @@ Die Arbeit der Autoren Farnaz Jahanbakhsh, Yannis Katsis, Dakuo Wang, Lucian Pop
 # Methode
 
 flowchart TD
-    n1["Start"] --> n2["Datenschutzerklärung"]
-    n2 --> n3["Pre-Test-Fragebogen"]
-    n3 --> n4["Baseline: Klassifizierung von 10 Posts ohne KI"]
-    n4 --> n5["Post-Baseline-Fragebogen"]
-    n5 --> n10["Randomization"]
-    n10 --> n11["Evaluative KI"] & n12["Empfehlende KI"]
-    n11 --> n16["Post-Test-Fragebogen"]
-    n12 --> n16
-    n16 --> n17["Verabschiedung und Dank"]
-    n17 --> n18["VP-Stunden-Umfrage"]
+n1\["Start"\] --\> n2\["Datenschutzerklärung"\] 
+n2 --\> n3\["Pre-Test-Fragebogen"\] 
+n3 --\> n4\["Baseline: Klassifizierung von 10 Posts o hneKI"\] 
+n4 --\> n5\["Post-Baseline-Fragebogen"\] 
+n5 --\> n10\["Randomization"\] 
+n10 --\> n11\["Evaluative KI"\] & n12\["Empfehlende KI"\] n11 --\> n16\["Post-Test-Fragebogen"\] 
+n12 --\> n16 
+n16 --\> n17\["Verabschiedung und Dank"\] 
+n17 --\> n18\["VP-Stunden-Umfrage"\]
 
-    n1@{ shape: rect}
+```         
+n1@{ shape: rect}
+```
 
 # Ergebnisse
 
