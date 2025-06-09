@@ -25,11 +25,17 @@ date: today
 bibliography: Literatur.bib
 ---
 
+
+
+
 ##Link des Repositories
 
 https://github.com/NeiUt/SMNF2025-B5/tree/main
 
 ##Aktueller Hash:
+
+
+
 
 ```{r}
 #| label: Commit Hash
@@ -38,6 +44,9 @@ commit_hash <- system("git rev-parse --short=7 HEAD", intern = TRUE)
 commit_hash
 
 ```
+
+
+
 
 # Code of Conduct
 
@@ -187,3 +196,4 @@ Wir freuen uns, wenn du uns unterstützt :)."
 "NeiUt"
 
 "jakolex03"
+
