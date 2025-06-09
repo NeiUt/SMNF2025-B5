@@ -81,6 +81,7 @@ Die Arbeit der Autoren Farnaz Jahanbakhsh, Yannis Katsis, Dakuo Wang, Lucian Pop
 
 # Methode
 
+```mermaid
 flowchart TD
 n1\["Start"\] --\> n2\["Datenschutzerklärung"\] 
 n2 --\> n3\["Pre-Test-Fragebogen"\] 
