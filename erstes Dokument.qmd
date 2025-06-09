@@ -91,36 +91,9 @@ Die Arbeit der Autoren Farnaz Jahanbakhsh, Yannis Katsis, Dakuo Wang, Lucian Pop
 
 # Methode
 
+## Qualitativer Methodenteil
 
----
-title: "Flowchart in Quarto"
-format: html
----
-
-## Ablaufdiagramm
-
-```{mermaid}
-flowchart TD
-    n1["Start"] --> n2["Datenschutzerklärung"]
-    n2 --> n3["Pre-Test-Fragebogen"]
-    n3 --> n4["Baseline: Klassifizierung von 10 Posts ohne KI"]
-    n4 --> n5["Post-Baseline-Fragebogen"]
-    n5 --> n10["Randomisierung"]
-    n10 --> n11["Evaluative KI"]
-    n10 --> n12["Empfehlende KI"]
-    n11 --> n16["Post-Test-Fragebogen"]
-    n12 --> n16
-    n16 --> n17["Verabschiedung und Dank"]
-    n17 --> n18["VP-Stunden-Umfrage"]
-```
-
-    
-    
-
-# Qualitativer Methodenteil
-
-\*Wir haben uns für einen qualitativ-explorativen Ansatz entschieden, da dieser ermöglicht, subjektive Erfahrungen, Bedarfe und Erwartungen von Social-Media-Nutzer hinsichtlich einer KI-basierten Misinformations­erkennung offen zu erfassen. Für unsere Untersuchung führten wir zwei Interviews mit Studierenden durch, die regelmäßig soziale Medien nutzen. Das erste Interview fand am 25.05.2025 statt, der Teilnehmende wird hier als "B5_01" bezeichnet , der zweite Teilnehmende "B5_02" am 26.05.2025. Beide Interviews dauerten jeweils 10-15 Minuten und wurden Digital aufgezeichnet.
->>>>>>> parent of 09c2f40 (Commit 09.06.2025)
+\*Wir haben uns für einen qualitativ-explorativen Ansatz entschieden, da dieser ermöglicht, subjektive Erfahrungen, Bedarfe und Erwartungen von Social-Media-Nutzer hinsichtlich einer KI-basierten Misinformations­erkennung offen zu erfassen. Für unsere Untersuchung führten wir zwei Interviews mit Studierenden durch, die regelmäßig soziale Medien nutzen. Das erste Interview fand am 25.05.2025 statt, der Teilnehmende wird hier als "B5_01" bezeichnet , der zweite Teilnehmende "B5_02" am 26.05.2025. Beide Interviews dauerten jeweils 10-15 Minuten und wurden Digital aufgezeichnet. \>\>\>\>\>\>\> parent of 09c2f40 (Commit 09.06.2025)
 
 Zunächst nutzten wir "Whisper" für die automatische Transkription, anschließend bearbeiteten wir die Texte manuell nach. Dabei ergänzten wir Zeilennummern, ersetzten Namen durch Pseudonyme und markierten Sprecherwechsel durch Kürzel (I für Interviewende, B5 für Teilnehmende). Identifizierende Details wurden vollständig anonymisiert.
 
@@ -131,7 +104,7 @@ Für die Datenauswertung nutzten wir die thematische Analyse nach Braun & Clarke
 ### Analyse
 
 | Aspekt | Vorwissen | Implementierung | Gefahren |
-|------------------------|----------------|----------------|----------------|
+|------------------|------------------|------------------|------------------|
 | **Definition** | Erfahrungen mit Social Media, Fake News und KI-Tools. | KI-Tools sollten benutzt werden, um den Grad der Falschinformationen zu kennzeichnen. Außerdem leicht erreichbar sein, aber nicht prägnant im Vordergrund stehen. | Ethische Fragestellung, wer diese KI-Tools kontrolliert, und welchen Einfluss eine fehlende Kennzeichnung haben kann. |
 | **Textstelle** | „Also, mir ist das erst quasi zur Corona-Zeit richtig aufgefallen. Da wurde ja sehr, sehr viel Fehlinformation und Halbwahrheiten gestreut. Da habe ich auch entdeckt, dass das teilweise gekennzeichnet worden ist, dass das nicht komplett der Wahrheit entspricht. Sowohl als YouTube als auch Instagram, ich glaube auf TikTok sogar auch.“ (B5_01, Zeile 68-73) | „Ich denke, es sollte schon immer präsent sein, damit sich auch Falschnachrichten generell einfach weniger verbreiten. Gleichzeitig sollte es aber natürlich nicht zu präsent sein und nicht zu viel Platz in der Anwendung einnehmen.“ (B5_02, Zeile 113–116) <br> „Vor allem in Situationen, wo man meinen könnte, dass die Information wirklich zutreffend ist, weil das für das eigene Bild in einem gewissen Themenbereich sehr wahrscheinlich klingt oder einleuchtend klingt, dass man das dann tendenziell sogar eher aufnehmen kann. KI's könnten da wirklich helfen, Nutzer aufmerksam zu machen, dass sich das da nicht um eine verifizierte Meinung handelt, sondern um irgendwelche erfundenen Sachen oder gezielten Fehlinformationen.“ (B5_01, Zeile 97–105) | „Ja also ich finde das sollte ein gesondertes Team sein es gibt ja auch zum Beispiel ein Ethikrat wenn es um Thema KI geht, was KI machen darf und was nicht. Die wären zum Beispiel eine interessante Anlaufstelle dafür, damit man halt so gut es geht Einflüsse von Dritten vermeiden könnte, die halt interne Ziele verfolgen.“ (B5_01, Zeile 197–202) <br> „Andererseits würde ich auch eine kleine Gefahr darin sehen, wenn man als Mensch diese KI dafür nutzt, um sich Informationen bestätigen zu lassen oder den Wahrheitsgehalt herauszufinden. Wenn man sich dann fälschlicherweise zu sehr auf die KI verlässt und die KI aber doch mal einen Fehler macht, wie das aktuell auch schon vorkommt.“ (B5_02, Zeile 82–87) |
 
@@ -153,21 +126,54 @@ Auch die Gefahren der KI wurden in unseren Interviews angesprochen. Hierbei werd
 
 ## Quantitativer Methodenteil
 
+### Ablauf
+
+Für Ablauf entwickelten wir folgendes Diagramm:
+
+```{mermaid}
+flowchart TD 
+n1["Start"] --> n2["Datenschutzerklärung"] 
+n2 --> n3["Pre-Test-Fragebogen"] 
+n3 --> n4["Baseline: Klassifizierung von 10 Posts ohne KI"]
+n4 --> n5["Post-Baseline-Fragebogen"] 
+n5 --> n10["Randomisierung"] 
+n10 --> n11["Evaluative KI"] 
+n10 --> n12["Empfehlende KI"] 
+n11 --> n16["Post-Test-Fragebogen"] 
+n12 --> n16 
+n16 --> n17["Verabschiedung und Dank"] 
+n17 --> n18["VP-Stunden-Umfrage"]
+```
+
+Unsere Datenerhebung erfolgt im Rahmen einer Studie, welche über DSSLab online durchgeführt wird. Der geplante Zeitraum geht vom 31.05.2025 bis zum 09.06.2025 um 23:59 Uhr. Die Rekrutierung beginnt bereits kurz vor dem 31.05.2025. Die Studie startet mit der Datenschutzerklärung und Informationen zum Ablauf(siehe Diagramm). Anschließend beginnt der Fragen-Teil. Die Proband\*innen müssen zunächst Fragen zum Vorwissen zu Künstlicher Intelligenz (KI) beantworten. Danach beginnt der Hauptteil der Studie: Die Teilnehmenden sollen versuchen, in zwei verschiedenen Szenarien vorgegebene Social-Media-Posts zu bewerten, während sie gleichzeitig auf eine kleine, farbenwechselnde Grafik reagieren. Im ersten Szenario müssen die Probanden alleine entscheiden, ob die gezeigten Posts Desinformationen oder wahre Informationen enthalten (Schritt 4: "Baseline: Klassifizierung von 10 Posts ohne KI"). Dazu bekommen sie nach der Bewertung von 10 Posts einen Fragebogen zum gerade abgeschlossenen Versuch. Dabei sollen die Empfindungen und Gefühle der Personen festgehalten werden. Nun folgt ein ähnliches Szenario, nur dass diesmal eine Künstliche Intelligenz bereitgestellt wird um die Proband\*innen beim Bewerten zu unterstützen. Hierbei wird zufällig zwischen evaluativer und empfehlender KI ausgewählt.( siehe Diagramm) Auch danach werden die Empfindungen der Testpersonen gemessen. Zum Abschluss der Online-Studie gibt es eine Danksagung und Studierende der Universität zu Lübeck können VP-Stunden beantragen.
+
+### Eigenschaften der Stichprobe
+
+Für diese Stichprobe nehmen wir uns vor, Menschen mit verschiedenen Bildungsabschlüssen und Altersgruppen zu rekrutieren. Minderjährige werden ausgeschlossen, aus Gründen des Datenschutzes. Außerdem wird niemand aus unserer eigenen Gruppe oder Teilnehmende des Kurses „Statistik und Methoden der Nutzerforschung“ eingeschlossen, da wir Interessenskonflikte vermeiden möchten. Insgesamt versuchen wir mindestens 18 Teilnehmer zu finden, da wir pro Mitglied jeweils mindestens 3 Personen brauchen. Dazu werden Studierende der Universität zu Lübeck, sowie Freunde und Familie rekrutiert.
+
+### Gewählte Erhebungsmethode
+
+Zur Erhebung unserer Daten nutzten wir eine standardisierte Online-Umfrage, die über die Plattform DSSLab bereitgestellt wurde. Die Erhebung fand im Zeitraum vom 31.05.2025 bis zum 09.06.2025 um 23:59 Uhr statt. Die Teilnahme war freiwillig, anonymisiert und datenschutzkonform. Zielgruppe waren deutschsprachige Erwachsene über 18 Jahren mit Internetzugang.
+
+#### Gewählte Skalen
+
+Die Online-Studie ist in mehrere Fragenblöcke unterteilt und umfasste sowohl demografische Angaben als auch psychologische Konstrukte wie Technikaffinität, Vertrauen in KI-generierte Inhalte und Vorwissen über Künstliche Intelligenz. Zunächst wurden demografische Daten erfasst.azu zählten das Alter (metrisch, Freitexteingabe), das Geschlecht (nominal, Auswahl: männlich, weiblich, anderes mit Freitextoption), sowie der höchste allgemeinbildende (ordinal, 5 Stufen) und berufliche Bildungsabschluss (ordinal, 6 Stufen). Dann folgt ein Block zu der Nutzung von sozialen Medien. Hier wurde die Nutzungshäufigkeit (ordinal, 5 Stufen-Skala von „nie“ bis „täglich“) sowie genutzte Plattformen (nominal, Mehrfachauswahl) und Hauptnutzungsmotive (ebenfalls nominal, Mehrfachauswahl) abgefragt. Diese Kategorien basierten auf aktuellen Social-Media-Statistiken nach Röhl (2024). Für die Erfassung des Vorwissens zur Künstlichen Intelligenz verwenden wir eine metrische 5-Punkt-Skala, von 1 = sehr wenig bis 5= sehr viel. Außerdem wird das Misstrauen gegenüber von KI generierten Informationen auch mit einer metrischen Skala von 1 bis 5 gemessen. Mithilfe der Affinity for Technology Interaction Scale (ATI-Skala) nach Franke et al. (2019) wird die Technikaffinität der Teilnehmer erfasst. Die Skala besteht aus 9 Items, die auf einer 6-Stufen metrischen Likert-Skala beantwortet wurden. Zusätlich wurde ein Item zur Technikbereitschaft us der Kurzskala von Neyer et al. (2016) verwendet: „Hinsichtlich technischer Neuentwicklungen bin ich sehr neugierig“, beantwortet auf einer 5-Stufen metrischen Skala (1 = stimmt gar nicht bis 5 = stimmt völlig).
+
+### Geplante Analysen
+
+Wir planen mindestens einen t-Test und eine Korrelation, um Daten für unsere Forschungsfragen zu sammeln. Beim unserem t-Test können wir die beiden Szenarien miteinander vergleichen. Dabei ist die unabhängige Variable das genaue Szenario, bedeutet entweder mit oder ohne KI-Unterstützung. Die abhängige Variable ist die Bewertung, ob die Information stimmt. Dafür benutzen wir einen paired t-Test. Die Proband\*innen werden einmal nach dem Durchlauf ohne KI-Unterstützung und einmal nach dem Durchlauf mit KI-Unterstützung befragt. Ebenso könnte man untersuchen ob eine Gruppe mit hohem Vorwissen anders bewertet als eine Gruppe mit wenig Vorwissen. Die unabhängige Variable ist hier die Gruppe, in der sich die Proband*innen befinden*. Die abhängige Variable ist erneut die Bewertung. Dies wäre ein independent t-test. Des Weiteren untersuchen die Korrelation zwischen Vorkenntnissen und Ergebnissen, sowie zwischen Alter und den Ergebnissen. Dabei gehen wir davon aus, dass Personen mit hohen Vorkenntnissen öfter richtig liegen. Bei der zweiten Korrelation ist die Vermutung, dass jüngere Teilnehmer\*innen die Desinformation besser erkennen. Bei der ersten Korrelation sind die Variablen: 1. Vorkenntnisse und 2. Bewertungen. Bei der zweiten Korrelation sind es 1. Alter und 2. Bewertungen.
+
 # Diskussion
 
 ## *(Diskussion einfügen)*
 
 # Anhänge
 
-## Anhang 1 - Rekrutierungstext (Online)                           
+## Anhang 1 - Rekrutierungstext (Online)
 
 **"Hilf uns Fake News zu bekämpfen!**
 
-Immer
-mehr Menschen werden durch Fake News im Internet beeinflusst. Um das zu
-verhindern, untersuchen wir in unserer Online-Studie wie man Künstliche
-Intelligenz dazu nutzen kann, um Falschinformationen zu erkennen und
-Menschen davor zu warnen. Dafür brauchen wir jetzt deine Hilfe.
+Immer mehr Menschen werden durch Fake News im Internet beeinflusst. Um das zu verhindern, untersuchen wir in unserer Online-Studie wie man Künstliche Intelligenz dazu nutzen kann, um Falschinformationen zu erkennen und Menschen davor zu warnen. Dafür brauchen wir jetzt deine Hilfe.
 
 **🕒 Dauer:  ca. 1h**
 
