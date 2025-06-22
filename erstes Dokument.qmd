@@ -104,7 +104,7 @@ Für die Datenauswertung nutzten wir die thematische Analyse nach Braun & Clarke
 ### Analyse
 
 | Aspekt | Vorwissen | Implementierung | Gefahren |
-|----|----|----|----|
+|------------------|------------------|------------------|------------------|
 | **Definition** | Erfahrungen mit Social Media, Fake News und KI-Tools. | KI-Tools sollten benutzt werden, um den Grad der Falschinformationen zu kennzeichnen. Außerdem leicht erreichbar sein, aber nicht prägnant im Vordergrund stehen. | Ethische Fragestellung, wer diese KI-Tools kontrolliert, und welchen Einfluss eine fehlende Kennzeichnung haben kann. |
 | **Textstelle** | „Also, mir ist das erst quasi zur Corona-Zeit richtig aufgefallen. Da wurde ja sehr, sehr viel Fehlinformation und Halbwahrheiten gestreut. Da habe ich auch entdeckt, dass das teilweise gekennzeichnet worden ist, dass das nicht komplett der Wahrheit entspricht. Sowohl als YouTube als auch Instagram, ich glaube auf TikTok sogar auch.“ (B5_01, Zeile 68-73) | „Ich denke, es sollte schon immer präsent sein, damit sich auch Falschnachrichten generell einfach weniger verbreiten. Gleichzeitig sollte es aber natürlich nicht zu präsent sein und nicht zu viel Platz in der Anwendung einnehmen.“ (B5_02, Zeile 113–116) <br> „Vor allem in Situationen, wo man meinen könnte, dass die Information wirklich zutreffend ist, weil das für das eigene Bild in einem gewissen Themenbereich sehr wahrscheinlich klingt oder einleuchtend klingt, dass man das dann tendenziell sogar eher aufnehmen kann. KI's könnten da wirklich helfen, Nutzer aufmerksam zu machen, dass sich das da nicht um eine verifizierte Meinung handelt, sondern um irgendwelche erfundenen Sachen oder gezielten Fehlinformationen.“ (B5_01, Zeile 97–105) | „Ja also ich finde das sollte ein gesondertes Team sein es gibt ja auch zum Beispiel ein Ethikrat wenn es um Thema KI geht, was KI machen darf und was nicht. Die wären zum Beispiel eine interessante Anlaufstelle dafür, damit man halt so gut es geht Einflüsse von Dritten vermeiden könnte, die halt interne Ziele verfolgen.“ (B5_01, Zeile 197–202) <br> „Andererseits würde ich auch eine kleine Gefahr darin sehen, wenn man als Mensch diese KI dafür nutzt, um sich Informationen bestätigen zu lassen oder den Wahrheitsgehalt herauszufinden. Wenn man sich dann fälschlicherweise zu sehr auf die KI verlässt und die KI aber doch mal einen Fehler macht, wie das aktuell auch schon vorkommt.“ (B5_02, Zeile 82–87) |
 
@@ -249,7 +249,7 @@ statistik_korrektheit_prozent <- korrektheits_variablen %>%
   mutate(
     Wert = if_else(
       Statistik != "n",
-      round(value, 2), 
+      round(value*100, 2), 
       round(value, 0)  
     )
   ) %>%
