@@ -169,16 +169,6 @@ Wir planen mindestens einen t-Test und eine Korrelation, um Daten für unsere Fo
 
 ```{r}
 #| echo: false
-<<<<<<< HEAD
-
-suppressPackageStartupMessages(library(dplyr))
-library(tidyr)
-library(dplyr)
-library(knitr)
-
-studiendaten <- read.csv("data_combined.csv", encoding = "UTF-8")
-
-=======
 #| message: false
 #| warning: false
 
@@ -190,27 +180,14 @@ library(knitr)
 
 studiendaten <- read.csv("data_combined.csv", encoding = "UTF-8")
 
-
->>>>>>> parent of c004268 (Tabellen erstellt)
 studiendaten <- studiendaten %>%
   mutate(
     korrektheit_ohne_ki = decision_correct_rate_B,
     korrektheit_ki_gesamt = rowMeans(select(., decision_correct_rate_R, decision_correct_rate_E), na.rm = TRUE)
   )
 
-<<<<<<< HEAD
 metrische_variablen_alter_ki <- studiendaten %>%
   select(age, aiknowledge)
-
-=======
-
-
-
-metrische_variablen_alter_ki <- studiendaten %>%
-  select(age, aiknowledge)
-
-
->>>>>>> parent of c004268 (Tabellen erstellt)
 statistik_metrisch_alter_ki <- metrische_variablen_alter_ki %>%
   summarise(across(everything(), list(
     n = ~sum(!is.na(.)),
@@ -229,11 +206,7 @@ statistik_metrisch_alter_ki <- metrische_variablen_alter_ki %>%
     Wert = if_else(
       Statistik != "n",
       round(value, 2), 
-<<<<<<< HEAD
-      round(value, 0) 
-=======
       round(value, 0)  
->>>>>>> parent of c004268 (Tabellen erstellt)
     )
   ) %>%
   select(Variable, Statistik, Wert) %>%
@@ -249,22 +222,12 @@ statistik_metrisch_alter_ki$Statistik <- factor(statistik_metrisch_alter_ki$Stat
 statistik_metrisch_alter_ki <- statistik_metrisch_alter_ki %>%
   arrange(Statistik)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of c004268 (Tabellen erstellt)
 knitr::kable(
   statistik_metrisch_alter_ki,
   caption = "Alter und KI-Vorkenntnisse",
   col.names = c("Statistik", "Alter", "KI-Vorkenntnisse")
 )
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> parent of c004268 (Tabellen erstellt)
 korrektheits_variablen <- studiendaten %>%
   select(korrektheit_ohne_ki, korrektheit_ki_gesamt)
 
@@ -308,10 +271,9 @@ knitr::kable(
   caption = "Korrektheit der Entscheidungen (in Prozent)",
   col.names = c("Statistik", "ohne KI", "mit KI")
 )
-<<<<<<< HEAD
-=======
 
->>>>>>> parent of c004268 (Tabellen erstellt)
+
+
 ```
 
 # Diskussion
