@@ -104,7 +104,7 @@ Für die Datenauswertung nutzten wir die thematische Analyse nach Braun & Clarke
 ### Analyse
 
 | Aspekt | Vorwissen | Implementierung | Gefahren |
-|------------------|------------------|------------------|------------------|
+|----|----|----|----|
 | **Definition** | Erfahrungen mit Social Media, Fake News und KI-Tools. | KI-Tools sollten benutzt werden, um den Grad der Falschinformationen zu kennzeichnen. Außerdem leicht erreichbar sein, aber nicht prägnant im Vordergrund stehen. | Ethische Fragestellung, wer diese KI-Tools kontrolliert, und welchen Einfluss eine fehlende Kennzeichnung haben kann. |
 | **Textstelle** | „Also, mir ist das erst quasi zur Corona-Zeit richtig aufgefallen. Da wurde ja sehr, sehr viel Fehlinformation und Halbwahrheiten gestreut. Da habe ich auch entdeckt, dass das teilweise gekennzeichnet worden ist, dass das nicht komplett der Wahrheit entspricht. Sowohl als YouTube als auch Instagram, ich glaube auf TikTok sogar auch.“ (B5_01, Zeile 68-73) | „Ich denke, es sollte schon immer präsent sein, damit sich auch Falschnachrichten generell einfach weniger verbreiten. Gleichzeitig sollte es aber natürlich nicht zu präsent sein und nicht zu viel Platz in der Anwendung einnehmen.“ (B5_02, Zeile 113–116) <br> „Vor allem in Situationen, wo man meinen könnte, dass die Information wirklich zutreffend ist, weil das für das eigene Bild in einem gewissen Themenbereich sehr wahrscheinlich klingt oder einleuchtend klingt, dass man das dann tendenziell sogar eher aufnehmen kann. KI's könnten da wirklich helfen, Nutzer aufmerksam zu machen, dass sich das da nicht um eine verifizierte Meinung handelt, sondern um irgendwelche erfundenen Sachen oder gezielten Fehlinformationen.“ (B5_01, Zeile 97–105) | „Ja also ich finde das sollte ein gesondertes Team sein es gibt ja auch zum Beispiel ein Ethikrat wenn es um Thema KI geht, was KI machen darf und was nicht. Die wären zum Beispiel eine interessante Anlaufstelle dafür, damit man halt so gut es geht Einflüsse von Dritten vermeiden könnte, die halt interne Ziele verfolgen.“ (B5_01, Zeile 197–202) <br> „Andererseits würde ich auch eine kleine Gefahr darin sehen, wenn man als Mensch diese KI dafür nutzt, um sich Informationen bestätigen zu lassen oder den Wahrheitsgehalt herauszufinden. Wenn man sich dann fälschlicherweise zu sehr auf die KI verlässt und die KI aber doch mal einen Fehler macht, wie das aktuell auch schon vorkommt.“ (B5_02, Zeile 82–87) |
 
@@ -162,6 +162,112 @@ Die Online-Studie ist in mehrere Fragenblöcke unterteilt und umfasste sowohl de
 ### Geplante Analysen
 
 Wir planen mindestens einen t-Test und eine Korrelation, um Daten für unsere Forschungsfragen zu sammeln. Beim unserem t-Test können wir die beiden Szenarien miteinander vergleichen. Dabei ist die unabhängige Variable das genaue Szenario, bedeutet entweder mit oder ohne KI-Unterstützung. Die abhängige Variable ist die Bewertung, ob die Information stimmt. Dafür benutzen wir einen paired t-Test. Die Proband\*innen werden einmal nach dem Durchlauf ohne KI-Unterstützung und einmal nach dem Durchlauf mit KI-Unterstützung befragt. Ebenso könnte man untersuchen ob eine Gruppe mit hohem Vorwissen anders bewertet als eine Gruppe mit wenig Vorwissen. Die unabhängige Variable ist hier die Gruppe, in der sich die Proband*innen befinden*. Die abhängige Variable ist erneut die Bewertung. Dies wäre ein independent t-test. Des Weiteren untersuchen die Korrelation zwischen Vorkenntnissen und Ergebnissen, sowie zwischen Alter und den Ergebnissen. Dabei gehen wir davon aus, dass Personen mit hohen Vorkenntnissen öfter richtig liegen. Bei der zweiten Korrelation ist die Vermutung, dass jüngere Teilnehmer\*innen die Desinformation besser erkennen. Bei der ersten Korrelation sind die Variablen: 1. Vorkenntnisse und 2. Bewertungen. Bei der zweiten Korrelation sind es 1. Alter und 2. Bewertungen.
+
+# Ergebnisse
+
+```{r}
+#| echo: false
+
+suppressPackageStartupMessages(library(dplyr))
+library(tidyr)
+library(dplyr)
+library(knitr)
+
+studiendaten <- read.csv("data_combined.csv", encoding = "UTF-8")
+
+studiendaten <- studiendaten %>%
+  mutate(
+    korrektheit_ohne_ki = decision_correct_rate_B,
+    korrektheit_ki_gesamt = rowMeans(select(., decision_correct_rate_R, decision_correct_rate_E), na.rm = TRUE)
+  )
+
+metrische_variablen_alter_ki <- studiendaten %>%
+  select(age, aiknowledge)
+
+statistik_metrisch_alter_ki <- metrische_variablen_alter_ki %>%
+  summarise(across(everything(), list(
+    n = ~sum(!is.na(.)),
+    mean = ~mean(., na.rm = TRUE),
+    median = ~median(., na.rm = TRUE),
+    min = ~min(., na.rm = TRUE),
+    max = ~max(., na.rm = TRUE),
+    sd = ~sd(., na.rm = TRUE)
+  ), .names = "{.col}_{.fn}")) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = c("Variable", "Statistik"),
+    names_sep = "_(?=[^_]+$)"
+  ) %>%
+  mutate(
+    Wert = if_else(
+      Statistik != "n",
+      round(value, 2), 
+      round(value, 0) 
+    )
+  ) %>%
+  select(Variable, Statistik, Wert) %>%
+  pivot_wider(
+    names_from = Variable,
+    values_from = Wert
+  ) %>%
+  rename(Statistik = Statistik)
+
+
+stat_order <- c("n", "mean", "median", "min", "max", "sd")
+statistik_metrisch_alter_ki$Statistik <- factor(statistik_metrisch_alter_ki$Statistik, levels = stat_order)
+statistik_metrisch_alter_ki <- statistik_metrisch_alter_ki %>%
+  arrange(Statistik)
+
+knitr::kable(
+  statistik_metrisch_alter_ki,
+  caption = "Alter und KI-Vorkenntnisse",
+  col.names = c("Statistik", "Alter", "KI-Vorkenntnisse")
+)
+
+korrektheits_variablen <- studiendaten %>%
+  select(korrektheit_ohne_ki, korrektheit_ki_gesamt)
+
+
+statistik_korrektheit_prozent <- korrektheits_variablen %>%
+  summarise(across(everything(), list(
+    n = ~sum(!is.na(.)),
+    mean = ~mean(., na.rm = TRUE),
+    median = ~median(., na.rm = TRUE),
+    min = ~min(., na.rm = TRUE),
+    max = ~max(., na.rm = TRUE),
+    sd = ~sd(., na.rm = TRUE)
+  ), .names = "{.col}_{.fn}")) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = c("Variable", "Statistik"),
+    names_sep = "_(?=[^_]+$)"
+  ) %>%
+  mutate(
+    Wert = if_else(
+      Statistik != "n",
+      round(value, 2), 
+      round(value, 0)  
+    )
+  ) %>%
+  select(Variable, Statistik, Wert) %>%
+  pivot_wider(
+    names_from = Variable,
+    values_from = Wert
+  ) %>%
+  rename(Statistik = Statistik)
+
+
+statistik_korrektheit_prozent$Statistik <- factor(statistik_korrektheit_prozent$Statistik, levels = stat_order)
+statistik_korrektheit_prozent <- statistik_korrektheit_prozent %>%
+  arrange(Statistik)
+
+
+knitr::kable(
+  statistik_korrektheit_prozent,
+  caption = "Korrektheit der Entscheidungen (in Prozent)",
+  col.names = c("Statistik", "ohne KI", "mit KI")
+)
+```
 
 # Diskussion
 
