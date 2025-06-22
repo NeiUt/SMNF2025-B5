@@ -8,7 +8,6 @@ author:
 - Paul Riehle
 - Jakob L
 
-date: today
 format: 
   html:
     number-sections: true
@@ -22,14 +21,15 @@ format:
     number-sections: true
 citation-location: document
 editor: visual
+date: today
 bibliography: Literatur.bib
 ---
 
-**Link des Repositories**
+##Link des Repositories
 
 https://github.com/NeiUt/SMNF2025-B5/tree/main
 
-**Aktueller Hash:**
+##Aktueller Hash:
 
 ```{r}
 #| label: Commit Hash
@@ -131,11 +131,10 @@ Auch die Gefahren der KI wurden in unseren Interviews angesprochen. Hierbei werd
 Für Ablauf entwickelten wir folgendes Diagramm:
 
 ```{mermaid}
-{mermaid}
 flowchart TD 
 n1["Start"] --> n2["Datenschutzerklärung"] 
 n2 --> n3["Pre-Test-Fragebogen"] 
-n3 --> n4["Baseline: Klassifizierung von 10 Posts ohne KI"] 
+n3 --> n4["Baseline: Klassifizierung von 10 Posts ohne KI"]
 n4 --> n5["Post-Baseline-Fragebogen"] 
 n5 --> n10["Randomisierung"] 
 n10 --> n11["Evaluative KI"] 
@@ -144,7 +143,6 @@ n11 --> n16["Post-Test-Fragebogen"]
 n12 --> n16 
 n16 --> n17["Verabschiedung und Dank"] 
 n17 --> n18["VP-Stunden-Umfrage"]
-
 ```
 
 Unsere Datenerhebung erfolgt im Rahmen einer Studie, welche über DSSLab online durchgeführt wird. Der geplante Zeitraum geht vom 31.05.2025 bis zum 09.06.2025 um 23:59 Uhr. Die Rekrutierung beginnt bereits kurz vor dem 31.05.2025. Die Studie startet mit der Datenschutzerklärung und Informationen zum Ablauf(siehe Diagramm). Anschließend beginnt der Fragen-Teil. Die Proband\*innen müssen zunächst Fragen zum Vorwissen zu Künstlicher Intelligenz (KI) beantworten. Danach beginnt der Hauptteil der Studie: Die Teilnehmenden sollen versuchen, in zwei verschiedenen Szenarien vorgegebene Social-Media-Posts zu bewerten, während sie gleichzeitig auf eine kleine, farbenwechselnde Grafik reagieren. Im ersten Szenario müssen die Probanden alleine entscheiden, ob die gezeigten Posts Desinformationen oder wahre Informationen enthalten (Schritt 4: "Baseline: Klassifizierung von 10 Posts ohne KI"). Dazu bekommen sie nach der Bewertung von 10 Posts einen Fragebogen zum gerade abgeschlossenen Versuch. Dabei sollen die Empfindungen und Gefühle der Personen festgehalten werden. Nun folgt ein ähnliches Szenario, nur dass diesmal eine Künstliche Intelligenz bereitgestellt wird um die Proband\*innen beim Bewerten zu unterstützen. Hierbei wird zufällig zwischen evaluativer und empfehlender KI ausgewählt.( siehe Diagramm) Auch danach werden die Empfindungen der Testpersonen gemessen. Zum Abschluss der Online-Studie gibt es eine Danksagung und Studierende der Universität zu Lübeck können VP-Stunden beantragen.
@@ -164,125 +162,6 @@ Die Online-Studie ist in mehrere Fragenblöcke unterteilt und umfasste sowohl de
 ### Geplante Analysen
 
 Wir planen mindestens einen t-Test und eine Korrelation, um Daten für unsere Forschungsfragen zu sammeln. Beim unserem t-Test können wir die beiden Szenarien miteinander vergleichen. Dabei ist die unabhängige Variable das genaue Szenario, bedeutet entweder mit oder ohne KI-Unterstützung. Die abhängige Variable ist die Bewertung, ob die Information stimmt. Dafür benutzen wir einen paired t-Test. Die Proband\*innen werden einmal nach dem Durchlauf ohne KI-Unterstützung und einmal nach dem Durchlauf mit KI-Unterstützung befragt. Ebenso könnte man untersuchen ob eine Gruppe mit hohem Vorwissen anders bewertet als eine Gruppe mit wenig Vorwissen. Die unabhängige Variable ist hier die Gruppe, in der sich die Proband*innen befinden*. Die abhängige Variable ist erneut die Bewertung. Dies wäre ein independent t-test. Des Weiteren untersuchen die Korrelation zwischen Vorkenntnissen und Ergebnissen, sowie zwischen Alter und den Ergebnissen. Dabei gehen wir davon aus, dass Personen mit hohen Vorkenntnissen öfter richtig liegen. Bei der zweiten Korrelation ist die Vermutung, dass jüngere Teilnehmer\*innen die Desinformation besser erkennen. Bei der ersten Korrelation sind die Variablen: 1. Vorkenntnisse und 2. Bewertungen. Bei der zweiten Korrelation sind es 1. Alter und 2. Bewertungen.
-
-# Ergebnisse
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-
-
-library(dplyr)
-library(tidyr)
-library(knitr)
-
-
-studiendaten <- read.csv("data_combined.csv", encoding = "UTF-8")
-
-
-studiendaten <- studiendaten %>%
-  mutate(
-    korrektheit_ohne_ki = decision_correct_rate_B,
-    korrektheit_ki_gesamt = rowMeans(select(., decision_correct_rate_R, decision_correct_rate_E), na.rm = TRUE)
-  )
-
-
-
-
-metrische_variablen_alter_ki <- studiendaten %>%
-  select(age, aiknowledge)
-
-
-statistik_metrisch_alter_ki <- metrische_variablen_alter_ki %>%
-  summarise(across(everything(), list(
-    n = ~sum(!is.na(.)),
-    mean = ~mean(., na.rm = TRUE),
-    median = ~median(., na.rm = TRUE),
-    min = ~min(., na.rm = TRUE),
-    max = ~max(., na.rm = TRUE),
-    sd = ~sd(., na.rm = TRUE)
-  ), .names = "{.col}_{.fn}")) %>%
-  pivot_longer(
-    cols = everything(),
-    names_to = c("Variable", "Statistik"),
-    names_sep = "_(?=[^_]+$)"
-  ) %>%
-  mutate(
-    Wert = if_else(
-      Statistik != "n",
-      round(value, 2), 
-      round(value, 0)  
-    )
-  ) %>%
-  select(Variable, Statistik, Wert) %>%
-  pivot_wider(
-    names_from = Variable,
-    values_from = Wert
-  ) %>%
-  rename(Statistik = Statistik)
-
-
-stat_order <- c("n", "mean", "median", "min", "max", "sd")
-statistik_metrisch_alter_ki$Statistik <- factor(statistik_metrisch_alter_ki$Statistik, levels = stat_order)
-statistik_metrisch_alter_ki <- statistik_metrisch_alter_ki %>%
-  arrange(Statistik)
-
-
-knitr::kable(
-  statistik_metrisch_alter_ki,
-  caption = "Alter und KI-Vorkenntnisse",
-  col.names = c("Statistik", "Alter", "KI-Vorkenntnisse")
-)
-
-
-
-
-korrektheits_variablen <- studiendaten %>%
-  select(korrektheit_ohne_ki, korrektheit_ki_gesamt)
-
-
-statistik_korrektheit_prozent <- korrektheits_variablen %>%
-  summarise(across(everything(), list(
-    n = ~sum(!is.na(.)),
-    mean = ~mean(., na.rm = TRUE),
-    median = ~median(., na.rm = TRUE),
-    min = ~min(., na.rm = TRUE),
-    max = ~max(., na.rm = TRUE),
-    sd = ~sd(., na.rm = TRUE)
-  ), .names = "{.col}_{.fn}")) %>%
-  pivot_longer(
-    cols = everything(),
-    names_to = c("Variable", "Statistik"),
-    names_sep = "_(?=[^_]+$)"
-  ) %>%
-  mutate(
-    Wert = if_else(
-      Statistik != "n",
-      round(value, 2), 
-      round(value, 0)  
-    )
-  ) %>%
-  select(Variable, Statistik, Wert) %>%
-  pivot_wider(
-    names_from = Variable,
-    values_from = Wert
-  ) %>%
-  rename(Statistik = Statistik)
-
-
-statistik_korrektheit_prozent$Statistik <- factor(statistik_korrektheit_prozent$Statistik, levels = stat_order)
-statistik_korrektheit_prozent <- statistik_korrektheit_prozent %>%
-  arrange(Statistik)
-
-
-knitr::kable(
-  statistik_korrektheit_prozent,
-  caption = "Korrektheit der Entscheidungen (in Prozent)",
-  col.names = c("Statistik", "ohne KI", "mit KI")
-)
-
-```
 
 # Diskussion
 
