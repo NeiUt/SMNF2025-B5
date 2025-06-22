@@ -8,6 +8,7 @@ author:
 - Paul Riehle
 - Jakob L
 
+date: today
 format: 
   html:
     number-sections: true
@@ -21,15 +22,14 @@ format:
     number-sections: true
 citation-location: document
 editor: visual
-date: today
 bibliography: Literatur.bib
 ---
 
-##Link des Repositories
+**Link des Repositories**
 
 https://github.com/NeiUt/SMNF2025-B5/tree/main
 
-##Aktueller Hash:
+**Aktueller Hash:**
 
 ```{r}
 #| label: Commit Hash
@@ -131,10 +131,11 @@ Auch die Gefahren der KI wurden in unseren Interviews angesprochen. Hierbei werd
 Für Ablauf entwickelten wir folgendes Diagramm:
 
 ```{mermaid}
+{mermaid}
 flowchart TD 
 n1["Start"] --> n2["Datenschutzerklärung"] 
 n2 --> n3["Pre-Test-Fragebogen"] 
-n3 --> n4["Baseline: Klassifizierung von 10 Posts ohne KI"]
+n3 --> n4["Baseline: Klassifizierung von 10 Posts ohne KI"] 
 n4 --> n5["Post-Baseline-Fragebogen"] 
 n5 --> n10["Randomisierung"] 
 n10 --> n11["Evaluative KI"] 
@@ -143,6 +144,7 @@ n11 --> n16["Post-Test-Fragebogen"]
 n12 --> n16 
 n16 --> n17["Verabschiedung und Dank"] 
 n17 --> n18["VP-Stunden-Umfrage"]
+
 ```
 
 Unsere Datenerhebung erfolgt im Rahmen einer Studie, welche über DSSLab online durchgeführt wird. Der geplante Zeitraum geht vom 31.05.2025 bis zum 09.06.2025 um 23:59 Uhr. Die Rekrutierung beginnt bereits kurz vor dem 31.05.2025. Die Studie startet mit der Datenschutzerklärung und Informationen zum Ablauf(siehe Diagramm). Anschließend beginnt der Fragen-Teil. Die Proband\*innen müssen zunächst Fragen zum Vorwissen zu Künstlicher Intelligenz (KI) beantworten. Danach beginnt der Hauptteil der Studie: Die Teilnehmenden sollen versuchen, in zwei verschiedenen Szenarien vorgegebene Social-Media-Posts zu bewerten, während sie gleichzeitig auf eine kleine, farbenwechselnde Grafik reagieren. Im ersten Szenario müssen die Probanden alleine entscheiden, ob die gezeigten Posts Desinformationen oder wahre Informationen enthalten (Schritt 4: "Baseline: Klassifizierung von 10 Posts ohne KI"). Dazu bekommen sie nach der Bewertung von 10 Posts einen Fragebogen zum gerade abgeschlossenen Versuch. Dabei sollen die Empfindungen und Gefühle der Personen festgehalten werden. Nun folgt ein ähnliches Szenario, nur dass diesmal eine Künstliche Intelligenz bereitgestellt wird um die Proband\*innen beim Bewerten zu unterstützen. Hierbei wird zufällig zwischen evaluativer und empfehlender KI ausgewählt.( siehe Diagramm) Auch danach werden die Empfindungen der Testpersonen gemessen. Zum Abschluss der Online-Studie gibt es eine Danksagung und Studierende der Universität zu Lübeck können VP-Stunden beantragen.
@@ -167,6 +169,7 @@ Wir planen mindestens einen t-Test und eine Korrelation, um Daten für unsere Fo
 
 ```{r}
 #| echo: false
+<<<<<<< HEAD
 
 suppressPackageStartupMessages(library(dplyr))
 library(tidyr)
@@ -175,15 +178,39 @@ library(knitr)
 
 studiendaten <- read.csv("data_combined.csv", encoding = "UTF-8")
 
+=======
+#| message: false
+#| warning: false
+
+
+library(dplyr)
+library(tidyr)
+library(knitr)
+
+
+studiendaten <- read.csv("data_combined.csv", encoding = "UTF-8")
+
+
+>>>>>>> parent of c004268 (Tabellen erstellt)
 studiendaten <- studiendaten %>%
   mutate(
     korrektheit_ohne_ki = decision_correct_rate_B,
     korrektheit_ki_gesamt = rowMeans(select(., decision_correct_rate_R, decision_correct_rate_E), na.rm = TRUE)
   )
 
+<<<<<<< HEAD
 metrische_variablen_alter_ki <- studiendaten %>%
   select(age, aiknowledge)
 
+=======
+
+
+
+metrische_variablen_alter_ki <- studiendaten %>%
+  select(age, aiknowledge)
+
+
+>>>>>>> parent of c004268 (Tabellen erstellt)
 statistik_metrisch_alter_ki <- metrische_variablen_alter_ki %>%
   summarise(across(everything(), list(
     n = ~sum(!is.na(.)),
@@ -202,7 +229,11 @@ statistik_metrisch_alter_ki <- metrische_variablen_alter_ki %>%
     Wert = if_else(
       Statistik != "n",
       round(value, 2), 
+<<<<<<< HEAD
       round(value, 0) 
+=======
+      round(value, 0)  
+>>>>>>> parent of c004268 (Tabellen erstellt)
     )
   ) %>%
   select(Variable, Statistik, Wert) %>%
@@ -218,12 +249,22 @@ statistik_metrisch_alter_ki$Statistik <- factor(statistik_metrisch_alter_ki$Stat
 statistik_metrisch_alter_ki <- statistik_metrisch_alter_ki %>%
   arrange(Statistik)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of c004268 (Tabellen erstellt)
 knitr::kable(
   statistik_metrisch_alter_ki,
   caption = "Alter und KI-Vorkenntnisse",
   col.names = c("Statistik", "Alter", "KI-Vorkenntnisse")
 )
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> parent of c004268 (Tabellen erstellt)
 korrektheits_variablen <- studiendaten %>%
   select(korrektheit_ohne_ki, korrektheit_ki_gesamt)
 
@@ -267,6 +308,10 @@ knitr::kable(
   caption = "Korrektheit der Entscheidungen (in Prozent)",
   col.names = c("Statistik", "ohne KI", "mit KI")
 )
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of c004268 (Tabellen erstellt)
 ```
 
 # Diskussion
