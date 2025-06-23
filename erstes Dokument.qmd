@@ -12,9 +12,11 @@ date: today
 format: 
   html:
     number-sections: true
+    fig-format: png
     toc: true
   pdf:
     toc: true
+    fig-format: pdf
     papersize: a4
     geometry: margin=2.5cm
     documentclass: article
@@ -130,8 +132,7 @@ Auch die Gefahren der KI wurden in unseren Interviews angesprochen. Hierbei werd
 
 Für Ablauf entwickelten wir folgendes Diagramm:
 
-```{mermaid}
-{mermaid}
+``` mermaid
 flowchart TD 
 n1["Start"] --> n2["Datenschutzerklärung"] 
 n2 --> n3["Pre-Test-Fragebogen"] 
@@ -144,7 +145,6 @@ n11 --> n16["Post-Test-Fragebogen"]
 n12 --> n16 
 n16 --> n17["Verabschiedung und Dank"] 
 n17 --> n18["VP-Stunden-Umfrage"]
-
 ```
 
 Unsere Datenerhebung erfolgt im Rahmen einer Studie, welche über DSSLab online durchgeführt wird. Der geplante Zeitraum geht vom 31.05.2025 bis zum 09.06.2025 um 23:59 Uhr. Die Rekrutierung beginnt bereits kurz vor dem 31.05.2025. Die Studie startet mit der Datenschutzerklärung und Informationen zum Ablauf(siehe Diagramm). Anschließend beginnt der Fragen-Teil. Die Proband\*innen müssen zunächst Fragen zum Vorwissen zu Künstlicher Intelligenz (KI) beantworten. Danach beginnt der Hauptteil der Studie: Die Teilnehmenden sollen versuchen, in zwei verschiedenen Szenarien vorgegebene Social-Media-Posts zu bewerten, während sie gleichzeitig auf eine kleine, farbenwechselnde Grafik reagieren. Im ersten Szenario müssen die Probanden alleine entscheiden, ob die gezeigten Posts Desinformationen oder wahre Informationen enthalten (Schritt 4: "Baseline: Klassifizierung von 10 Posts ohne KI"). Dazu bekommen sie nach der Bewertung von 10 Posts einen Fragebogen zum gerade abgeschlossenen Versuch. Dabei sollen die Empfindungen und Gefühle der Personen festgehalten werden. Nun folgt ein ähnliches Szenario, nur dass diesmal eine Künstliche Intelligenz bereitgestellt wird um die Proband\*innen beim Bewerten zu unterstützen. Hierbei wird zufällig zwischen evaluativer und empfehlender KI ausgewählt.( siehe Diagramm) Auch danach werden die Empfindungen der Testpersonen gemessen. Zum Abschluss der Online-Studie gibt es eine Danksagung und Studierende der Universität zu Lübeck können VP-Stunden beantragen.
@@ -167,6 +167,8 @@ Wir planen mindestens einen t-Test und eine Korrelation, um Daten für unsere Fo
 
 # Ergebnisse
 
+## Tabellen: deskriptive Statistik
+
 ```{r}
 #| echo: false
 #| message: false
@@ -176,6 +178,7 @@ Wir planen mindestens einen t-Test und eine Korrelation, um Daten für unsere Fo
 library(dplyr)
 library(tidyr)
 library(knitr)
+library(ggplot2)
 
 
 studiendaten <- read.csv("data_combined.csv", encoding = "UTF-8")
@@ -272,7 +275,44 @@ knitr::kable(
   col.names = c("Statistik", "ohne KI", "mit KI")
 )
 
-# Dot-and-Whisker-Plot
+
+```
+
+## Mittelwertvergleich
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# Pakete laden
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(Hmisc)
+
+# Daten einlesen
+studiendaten2 <- read.csv("data_combined.csv", encoding = "UTF-8")
+
+# Neue Spalten mit Korrektheit berechnen
+studiendaten2 <- studiendaten2 %>%
+  mutate(
+    korrektheit_ohne_ki = decision_correct_rate_B,
+    korrektheit_ki_gesamt = rowMeans(select(., decision_correct_rate_R, decision_correct_rate_E), na.rm = TRUE)
+  )
+
+# Daten ins Long-Format bringen für ggplot
+data_long <- studiendaten2 %>%
+  select(korrektheit_ohne_ki, korrektheit_ki_gesamt) %>%
+  pivot_longer(cols = everything(), names_to = "Bedingung", values_to = "Korrektheit") %>%
+  mutate(
+    Bedingung = recode(Bedingung,
+                       "korrektheit_ohne_ki" = "Ohne KI",
+                       "korrektheit_ki_gesamt" = "Mit KI"),
+    Korrektheit = Korrektheit * 100  # Falls deine Werte in [0,1] sind
+  )
+
+# Plot erstellen
 ggplot(data_long, aes(x = Bedingung, y = Korrektheit, color = Bedingung)) +
   geom_jitter(width = 0.2, alpha = 0.5) +
   stat_summary(fun = mean, geom = "point", size = 4, shape = 18, color = "black") +
@@ -281,8 +321,11 @@ ggplot(data_long, aes(x = Bedingung, y = Korrektheit, color = Bedingung)) +
        y = "Korrektheit (%)", x = "Bedingung") +
   theme_minimal()
 
-
 ```
+
+## Stichprobe
+
+An unserer Studie zu “KI-Unterstützungssysteme bei der Erkennung von Falschinformationen auf sozialen Medien unter Einfluss unterschiedlicher kognitiver Belastung der Beiträge” nahmen (*N* = 176) Probanden teil. Davon gaben 48 % der Teilnehmenden an, dass sie männlich seien, 51% gaben an, dass sie weiblich seien und 1 % gab an, weder dem männlichen noch dem weiblichen Geschlecht zu zugehören. Bei den Teilnehmenden waren Personen aus verschiedenen Altersgruppen vertreten, wobei das durchschnittliche Alter (*M* = 24,94) betrug bei einer Standardabweichung von (*SD* = 10,60). Die Mehrheit der an der Studie teilnehmenden stimmte der Aussage, dass sie bei Informationen, die von KI erzeugt werden, eher misstrauisch sind, tendenziell zu (*M* = 3,65). Gleichzeitig schätzten sie ihr eigenes Vorwissen und Ihre Vorerfahrungen zum Thema KI als eher mittelmäßig ein (*M* = 3,11). Darüber hinaus zeigte sich eine tendenzielle Zustimmung zur Aussage, dass es ihnen genüge, wenn ein technisches System funktioniere – unabhängig davon, wie oder warum (*M* = 3,49, *Mdn* = 4).
 
 # Diskussion
 
