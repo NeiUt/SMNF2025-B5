@@ -322,9 +322,77 @@ ggplot(data_long, aes(x = Bedingung, y = Korrektheit, color = Bedingung)) +
   theme_minimal()
 
 ```
+
 ## Korrelationsanalyse
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'hide'
+
+# Pakete laden
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(Hmisc)
+
+# Daten einlesen
+studiendaten3 <- read.csv("data_combined.csv", encoding = "UTF-8")
+
+# Neue Spalten mit Korrektheit berechnen
+studiendaten3 <- studiendaten3 %>%
+  mutate(
+    vorwissen_ki = aiknowledge,
+    korrektheit_ki_gesamt = rowMeans(select(., decision_correct_rate_R, decision_correct_rate_E), na.rm = TRUE)
+  )
+
+cor.test(studiendaten3$aiknowledge,studiendaten3$korrektheit_ki_gesamt, method = "pearson")
 
 
+# Plot erstellen
+ggplot(studiendaten3, aes(x = vorwissen_ki, y = korrektheit_ki_gesamt)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  labs(title = "Zusammenhang zwischen Vorwissen von KI und Korrektheit mit KI",
+       x = "Vorwissen KI",
+       y = "Korrektheit mit KI")
+
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'hide'
+
+# Pakete laden
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(Hmisc)
+
+# Daten einlesen
+studiendaten4 <- read.csv("data_combined.csv", encoding = "UTF-8")
+
+# Neue Spalten mit Korrektheit berechnen
+studiendaten4 <- studiendaten4 %>%
+  mutate(
+    alter = age,
+    korrektheit_gesamt = rowMeans(select(., decision_correct_rate_R, decision_correct_rate_E, decision_correct_rate_B), na.rm = TRUE)
+  )
+
+
+cor.test(studiendaten4$age,studiendaten4$korrektheit_gesamt, method = "pearson")
+
+# Plot erstellen
+ggplot(studiendaten3, aes(x = age, y = studiendaten4$korrektheit_gesamt)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  labs(title = "Zusammenhang zwischen Alter und Korrektheit",
+       x = "Alter",
+       y = "Korrektheit")
+
+```
 ## Stichprobe
 
 An unserer Studie zu “KI-Unterstützungssysteme bei der Erkennung von Falschinformationen auf sozialen Medien unter Einfluss unterschiedlicher kognitiver Belastung der Beiträge” nahmen (*N* = 176) Probanden teil. Davon gaben 48 % der Teilnehmenden an, dass sie männlich seien, 51% gaben an, dass sie weiblich seien und 1 % gab an, weder dem männlichen noch dem weiblichen Geschlecht zu zugehören. Bei den Teilnehmenden waren Personen aus verschiedenen Altersgruppen vertreten, wobei das durchschnittliche Alter (*M* = 24,94) betrug bei einer Standardabweichung von (*SD* = 10,60). Die Mehrheit der an der Studie teilnehmenden stimmte der Aussage, dass sie bei Informationen, die von KI erzeugt werden, eher misstrauisch sind, tendenziell zu (*M* = 3,65). Gleichzeitig schätzten sie ihr eigenes Vorwissen und Ihre Vorerfahrungen zum Thema KI als eher mittelmäßig ein (*M* = 3,11). Darüber hinaus zeigte sich eine tendenzielle Zustimmung zur Aussage, dass es ihnen genüge, wenn ein technisches System funktioniere – unabhängig davon, wie oder warum (*M* = 3,49, *Mdn* = 4).
