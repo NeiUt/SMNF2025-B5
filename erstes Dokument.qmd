@@ -322,6 +322,8 @@ ggplot(data_long, aes(x = Bedingung, y = Korrektheit, color = Bedingung)) +
   theme_minimal()
 
 ```
+## Korrelationsanalyse
+
 
 ## Stichprobe
 
