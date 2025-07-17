@@ -69,7 +69,19 @@ commit_hash
 
 # Einleitung
 
-*(Einleitung eingefügen)*
+Soziale Netzwerke erreichen heute mehr als 4,5 Milliarden Menschen weltweit und gelten vielfach als erste Anlaufstelle für Nachrichten und persönliche Meinungen. Nutzer:innen verbringen im Schnitt über zwei Stunden täglich in Feeds, in denen seriöse Berichte, Werbeinhalte, private Beiträge und Fehlinformationen („Misinformation“) untrennbar vermischt werden. Die auf Engagement ausgelegten Empfehlungsalgorithmen verstärken Beiträge mit hoher Interaktionsrate ganz unabhängig von ihrer faktischen Richtigkeit, wodurch sich falsche oder irreführende Inhalte rasch viral verbreiten können.
+
+Wardle und Derakhshan (2017) definieren Misinformation als „false, incomplete, inaccurate/misleading information or content which is generally shared by people who do not realize that it is false or misleading“. Nutzer:innen sind daher häufig nicht in der Lage, Falschmeldungen von verlässlichen Informationen zu unterscheiden.
+
+Im Frühjahr 2020 führte die Verschwörungstheorie, 5G-Mobilfunkmasten würden COVID‑19 auslösen, in Großbritannien zu Brandanschlägen auf Sendemasten und tätlichen Angriffen auf Techniker:innen. Bereits im US‑Wahlkampf 2016 eskalierte die sogenannte „Pizzagate“-Verschwörung, als ein Bewaffneter eine Washingtoner Pizzeria stürmte und andere Gäste bedrohte. Solche Ereignisse zeigen, dass viral verbreitete Falschinformationen nicht nur öffentliche Debatten verzerren, sondern auch konkrete Schäden anrichten und Menschenleben gefährden können.
+
+Obwohl mittlerweile zahlreiche KI‑gestützte Detektionssysteme für Fake News existieren, liegt ihr Hauptaugenmerk oft auf technischen Leistungskennzahlen wie Klassifikationsgenauigkeit und False‑Positive‑Raten. Wichtige Aspekte der Nutzer:innenakzeptanz – insbesondere Erklärbarkeit, Vertrauungsbildung und Usability – werden dabei häufig vernachlässigt. Warnhinweise ohne verständliche Begründung oder nachvollziehbare Entscheidungsgrundlagen werden von vielen Anwender:innen ignoriert und verlieren dadurch ihren praktischen Nutzen.
+
+Vor diesem Hintergrund verfolgt unsere Studie einen nutzerzentrierten Ansatz: Wir möchten herausfinden, welche funktionalen, gestalterischen und vertrauensrelevanten Anforderungen Social‑Media‑Nutzer:innen an eine KI‑Anwendung stellen, die sie beim Erkennen von Misinformation unterstützt.\
+Ziel ist es, ein Anforderungsprofil zu entwickeln, das technische Leistungsziele mit nutzerseitigen Erwartungen an Transparenz, Verständlichkeit und Bedienbarkeit verknüpft. Die zentrale Forschungsfrage lautet:\
+**Wie muss eine KI‑Anwendung gestaltet sein, damit Nutzer:innen Fehlinformationen auf Social Media zuverlässig erkennen können?**
+
+Zur Beantwortung dieser Frage kombinierten wir einen qualitativ‑explorativen Ansatz mit einem quantitativen Survey‑Design. Zunächst führten wir zwei halbstrukturierte Leitfaden‑Interviews und werteten sie mittels thematischer Analyse aus, um zentrale Themen und Nutzerbedarfe zu identifizieren. Anschließend befragten wir 176 Teilnehmende in einer standardisierten Online‑Studie, berechneten deskriptive Kennwerte, führten Mittelwertvergleiche und Pearson‑Korrelationen durch und prüften so die Übertragbarkeit der qualitativen Befunde. Im Folgenden beschreiben wir zunächst unsere Methodik, präsentieren dann die qualitativen und quantitativen Ergebnisse und leiten abschließend gestaltungsrelevante Implikationen für nutzerzentrierte KI‑Tools ab.
 
 # Literaturübersicht
 
