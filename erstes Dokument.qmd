@@ -1,5 +1,5 @@
 ---
-title: "SMNF2025-B5"
+title: "Fake News erkennen, aber wie? Eine nutzerzentrierte Analyse von KI-Anwendungen in sozialen Netzwerken - SMNF2025-B5"
 author:
 - Mattis Becker
 - Justus H
